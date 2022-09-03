@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iemcrp/pages/Authentication/authentication.dart';
 import 'package:iemcrp/pages/wrapper.dart';
 
 void main() {
@@ -11,13 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Wrapper(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => Wrapper(),
+        '/authenticate': (context) => Authenticate(),
+      },
+
+      // home: Wrapper(),
     );
   }
 }
-
-
-
-
-
-

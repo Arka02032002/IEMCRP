@@ -6,19 +6,38 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueAccent,
       body: Column(
-        // mainAxisAlignment: MainAxisAlignment(),
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           TextButton.icon(
-            onPressed: () {},
-            icon: Icon(Icons.person),
-            label: Text('Login as Teacher'),
+            onPressed: () {
+              Navigator.pushNamed(context, '/authenticate');
+
+            },
+            icon: Icon(Icons.person, color: Colors.white),
+            label: Text(
+              'Login as Teacher',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 23,
+              ),
+            ),
           ),
-          SizedBox(height: 20,),
+          SizedBox(
+            height: 20,
+          ),
           TextButton.icon(
-            onPressed: () {},
-            icon: Icon(Icons.person),
-            label: Text('Login as Teacher'),
+            onPressed: () {
+              Navigator.pushNamed(context, '/authenticate');
+
+            },
+            icon: Icon(Icons.person, color: Colors.white),
+            label: Text(
+              'Login as Student',
+              style: TextStyle(color: Colors.white, fontSize: 23),
+            ),
           )
         ],
       ),
